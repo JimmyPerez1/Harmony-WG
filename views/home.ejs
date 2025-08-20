@@ -1,12 +1,20 @@
 <%- include('./partials/header.ejs') %>
 
-<main class="max-w-4xl mx-auto py-12 px-4 text-center">
-  <h1 class="text-4xl font-extrabold text-blue-600 mb-4">Welcome to Jimmy’s Portfolio</h1>
-  <p class="text-lg text-gray-700 mb-6">This site showcases my best work and full-stack projects.</p>
+<section class="relative w-full h-screen overflow-hidden">
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="/videos/Portfolio_bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-  <a href="/projects" class="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
-    View My Projects
-  </a>
-</main>
+<div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">Welcome to Jimmy’s Portfolio</h1>
+    <p class="text-lg md:text-2xl mt-4 drop-shadow-md">Full-stack developer building tech that empowers people and communities.</p>
+    <a href="/projects" class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition">
+      View Projects
+    </a>
+  </div>
+
+<div class="absolute top-0 left-0 w-full h-full bg-black/50 z-0"></div>
+</section>
 
 <%- include('./partials/footer.ejs') %>
