@@ -22,14 +22,14 @@
 
   <div 
     id="menu" 
-    class="hidden flex flex-col space-y-4 absolute top-16 right-6 bg-black p-4 rounded-md md:static md:flex-row md:space-y-0 md:space-x-4">
+    class="hidden flex flex-col space-y-4 absolute top-16 right-6 bg-black p-4 rounded-md md:static md:flex md:flex-row md:space-y-0 md:space-x-4">
       <a href="/projects" class=" text-white hover:text-orange-500">Projects</a>
     <% if (user) { %>
       <a href="/projects/new" class=" text-white hover:text-orange-500">Add Project</a>
       <a href="/auth/sign-out" class=" text-white hover:text-orange-500">Sign Out</a>
       <span class="ml-2 text-white font-semibold"><%= user.name %></span>
     <% } else { %>
-      <a href="/auth/sign-in" class=" text-white hover:text-orange-500">Sign In</a>
+      <a href="/auth/sign-in" class=" text-white hover:text-orange-500">Admin Login</a>
     <% } %>
   </div>
   </nav>

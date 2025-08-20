@@ -11,14 +11,20 @@ const ensureLoggedIn = require('../middleware/ensure-logged-in');
 // index action
 // GET /projects
 // Example of a non-protected route
-router.get('/', (req, res) => {
-  res.send('List of all Projects - not protected');
+router.get('/', async (req, res) => {
+  try{
+    const projects = await Project.find({});
+    res.render('projects/index', { projects, user: req.user})
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
 });
 
 // GET /projects/new
 // Example of a protected route
 router.get('/new', ensureLoggedIn, (req, res) => {
-  res.send('Create a Project!');
+  res.render('projects/new', { user: req.user });
 });
 
 module.exports = router;
