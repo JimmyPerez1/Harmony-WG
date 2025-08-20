@@ -4,21 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
-  <title>Express Starter</title>
+  <title>Jimmy Portfolio</title>
 </head>
 <body>
-  <nav>
-    <a href="/">🏠</a>
-    <div>
-      <a href="/unicorns">ALL UNICORNS</a>
-      <% if (user) { %>
-        <a href="/unicorns/new">ADD UNICORN</a>
-        <a href="/auth/sign-out">SIGN OUT</a>
-        <span><%= user.name %></span>
-      <% } else { %>
-        <a href="/auth/sign-up">SIGN UP</a>
-        <a href="/auth/sign-in">SIGN IN</a>
-      <% } %>
-    </div>
-  </nav>
+  <nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+  <a href="/" class="text-2xl font-bold">🏠</a>
+  
+  <div class="space-x-4">
+    <a href="/projects" class="text-gray-700 hover:text-blue-600">Projects</a>
+    <% if (user) { %>
+      <a href="/projects/new" class="text-gray-700 hover:text-blue-600">Add Project</a>
+      <a href="/auth/sign-out" class="text-gray-700 hover:text-red-600">Sign Out</a>
+      <span class="ml-2 text-gray-500 font-semibold"><%= user.name %></span>
+    <% } else { %>
+      <a href="/auth/sign-up" class="text-gray-700 hover:text-green-600">Sign Up</a>
+      <a href="/auth/sign-in" class="text-gray-700 hover:text-blue-600">Sign In</a>
+    <% } %>
+  </div>
+</nav>
   <main>
