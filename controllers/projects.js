@@ -12,11 +12,28 @@ const ensureLoggedIn = require('../middleware/ensure-logged-in');
 // Example of a non-protected route
 router.get('/', async (req, res) => {
   try{
-    const projects = await Project.find({});
+    const filter = {};
+
+    if (req.query.tag && req.query.tag !== 'All') {
+      filter.tags = req.query.tag;
+    }
+
+    if (req.query.tech && req.query.tech !== 'All') {
+      filter.technologies = req.query.tech;
+    }
+    const projects = await Project.find(filter);
+    const allTags = Project.schema.path('tags').caster.enumValues;
+    const allTech = await Project.distinct('technologies');
+
     res.render('projects/index', { 
       title: 'Projects',
       projects,
-      user: req.user})
+      user: req.user,
+      allTags,
+      allTech,
+      selectedTag: req.query.tag || 'All',
+      selectedTech: req.query.tech || 'All'
+    })
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');
@@ -60,6 +77,53 @@ router.get('/:id', ensureLoggedIn, async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(404).send('Project not found');
+  }
+});
+
+router.get('/:id/edit', ensureLoggedIn, async (req, res) => {
+  try {
+    const project = await Project.findById(req.params.id);
+
+    if (!project.createdBy.equals(req.user._id)) {
+      return res.status(403).send('Unauthorized');
+    }
+
+    res.render('projects/edit', { project, user: req.user });
+  } catch (err) {
+    console.error(err);
+    res.status(404).send('Project not found');
+  }
+});
+
+router.put('/:id', ensureLoggedIn, async (req, res) => {
+  try {
+    const project = await Project.findById(req.params.id);
+
+    if (!project.createdBy.equals(req.user._id)) {
+      return res.status(403).send('Unauthorized');
+    }
+
+    await Project.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.redirect(`/projects/${req.params.id}`);
+  } catch (err) {
+    console.error(err);
+    res.status(400).send('Project update failed');
+  }
+});
+
+router.delete('/:id', ensureLoggedIn, async (req, res) => {
+  try {
+    const project = await Project.findById(req.params.id);
+
+    if (!project.createdBy.equals(req.user._id)) {
+      return res.status(403).send('Unauthorized');
+    }
+
+    await Project.findByIdAndDelete(req.params.id);
+    res.redirect('/projects');
+  } catch (err) {
+    console.error(err);
+    res.status(400).send('Project deletion failed');
   }
 });
 
