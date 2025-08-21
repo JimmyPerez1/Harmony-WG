@@ -7,27 +7,28 @@ const SALT_ROUNDS = 6;
 
 // ALL paths start with "/auth"
 
-// Sign Up Form
+// // Sign Up Form
 // GET /auth/sign-up
-router.get('/sign-up', (req, res) => {
-  res.render('auth/sign-up.ejs', { error: '' });
-});
+// router.get('/sign-up', (req, res) => {
+//   res.render('auth/sign-up.ejs', { error: '' });
+// });
 
-// POST /auth/sign-up
-router.post('/sign-up', async (req, res) => {
-  try {
-    if (req.body.password !== req.body.confirmPassword) throw new Error('Passwords Do Not Match');
-    req.body.password = bcrypt.hashSync(req.body.password, SALT_ROUNDS);
-    const user = await User.create(req.body);
-    req.session.userId = user._id;
-    res.redirect('/')
-  } catch (err) {
-    // This code will execute if an error happens
-    // in the try block above
-    if (err.message.includes('duplicate key')) err.message = 'User Already Exists';
-    res.render('auth/sign-up.ejs', { error: err.message });
-  }
-});
+// // // POST /auth/sign-up
+// router.post('/sign-up', async (req, res) => {
+//   try {
+//     if (req.body.password !== req.body.confirmPassword) throw new Error('Passwords Do Not Match');
+//       req.body.email = req.body.email.trim().toLowerCase();
+//       req.body.password = bcrypt.hashSync(req.body.password, SALT_ROUNDS);
+//       const user = await User.create(req.body);
+//       req.session.userId = user._id;
+//       res.redirect('/')
+//   } catch (err) {
+//     // This code will execute if an error happens
+//     // in the try block above
+//     if (err.message.includes('duplicate key')) err.message = 'User Already Exists';
+//       res.render('auth/sign-up.ejs', { error: err.message });
+//   }
+// });
 
 // Return Sign In Form
 // GET /auth/sign-in 
@@ -39,13 +40,23 @@ router.get('/sign-in', (req, res) => {
 router.post('/sign-in', async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    if (!user) throw new Error();
-    const isValidPassword = bcrypt.compareSync(req.body.password, user.password);
-    if (!isValidPassword) throw new Error();
-    req.session.userId = user._id;
-    // TODO: Redirect to what you want in your app
-    res.redirect('/');
+    if (!user) {
+      console.log('User not found');
+      throw new Error();
+    }
+      const isValidPassword = bcrypt.compareSync(req.body.password, user.password);
+    if (!isValidPassword) {
+      console.log('Password incorrect');
+      throw new Error();
+    }
+
+      req.session.userId = user._id;
+      const redirectTo = req.session.redirectTo || '/';
+      delete req.session.redirectTo;
+      console.log('Logged in successfully:', user.email);
+      res.redirect(redirectTo);
   } catch {
+    console.log('Login failed');
     res.render('auth/sign-in.ejs', { error: 'Invalid Credentials' });
   }
 });

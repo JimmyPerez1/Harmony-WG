@@ -1,9 +1,17 @@
 const User = require('../models/user');
 
 module.exports = async function (req, res, next) {
-  // Add the user doc to req.user if logged in
-  req.user = req.session.userId ? await User.findById(req.session.userId) : null;
-  // Add the user doc to res.locals so that we can access user in our templates
-  res.locals.user = req.user;
+  if (req.session.userId) {
+    try {
+      const user = await User.findById(req.session.userId);
+      res.locals.user = user;
+      req.user = user;        
+    } catch (err) {
+      console.log('Error finding user from session:', err);
+    }
+  } else {
+    req.user = null;
+    res.locals.user = null;
+  }
   next();
 };
