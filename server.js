@@ -13,6 +13,7 @@ const session = require('express-session');
 
 // Set the port from environment variable or default to 3000
 const port = process.env.PORT || 3000;
+const Project = require('./models/project');
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -48,8 +49,17 @@ app.use(require('./middleware/add-user-to-req-and-locals'));
 // Routes below
 
 // GET / (root/default) -> Home Page
-app.get('/', (req, res) => {
-  res.render('home.ejs');
+app.get('/', async (req, res) => {
+  try {
+    const featuredProjects = await Project.find().limit(5);
+    res.render('home.ejs', { featuredProjects });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
+app.get('/about', (req, res) => {
+  res.render('about');
 });
 
 // The '/auth' is the "starts with" path.  The

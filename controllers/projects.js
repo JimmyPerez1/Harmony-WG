@@ -70,7 +70,7 @@ router.post('/', ensureLoggedIn, async (req, res) => {
   }
 });
 
-router.get('/:id', ensureLoggedIn, async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const project = await Project.findById(req.params.id).populate('createdBy');
     res.render('projects/show', { project, user: req.user });

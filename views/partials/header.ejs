@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <title>Jimmy Portfolio</title>
 </head>
 <body>
@@ -24,6 +25,7 @@
     id="menu" 
     class="hidden flex flex-col space-y-4 absolute top-16 right-6 bg-black p-4 rounded-md md:static md:flex md:flex-row md:space-y-0 md:space-x-4">
       <a href="/projects" class=" text-white hover:text-orange-500">Projects</a>
+      <a href="/about" class=" text-white hover:text-orange-500">About</a>
     <% if (user) { %>
       <a href="/projects/new" class=" text-white hover:text-orange-500">Add Project</a>
       <a href="/auth/sign-out" class=" text-white hover:text-orange-500">Sign Out</a>
