@@ -1,39 +1,14 @@
 <%- include('./partials/header') %>
 
 
-<div class="max-w-6xl mx-auto p-6 bg-white shadow rounded-lg">
-  <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-    <div class="flex-shrink-0">
+<div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-6 py-10">
+  <div class="flex flex-col items-center gap-4">
       <img 
         src="https://i.imgur.com/AFZB7Gi_d.png?maxwidth=520&shape=thumb&fidelity=high" 
         alt="Jimmy Perez in Army Uniform" 
-        class="w-64 h-auto rounded shadow-lg"
+        class="rounded-lg shadow-lg w-60 h-auto md:w-72 object-cover"
       />
-    </div>
-
-    <div class="flex-grow">
-      <h1 class="text-3xl font-bold mb-4">About Me</h1>
-
-      <p class="mb-4">
-        I'm <strong>Jimmy Perez</strong>, a full stack developer, Army veteran, and former healthcare specialist turned tech builder. With a background spanning emergency medicine, health insurance, and software engineering, I’ve spent my career solving problems under pressure—and building systems that put people first.
-      </p>
-
-      <p class="mb-4">
-        As an Army medic, I learned how to lead in high-stakes situations and developed the discipline and empathy that now shape my approach to technology. Later, in the health insurance world, I scaled a business across 30+ states by designing custom tools, automating workflows, and integrating AI to help people access the care they need.
-      </p>
-
-      <p class="mb-4">
-        Today, I bring that same mindset to software development—focused on creating intuitive, responsive applications that make a real difference. Whether it’s improving mental health through data visualization, streamlining service workflows, or building social platforms that foster community, I lead every project with purpose, resilience, and integrity.
-      </p>
-
-      <h2 class="text-2xl font-semibold mt-6 mb-3">💡 Interests</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li><strong>Veteran Tech</strong> – Giving back to the community that raised me</li>
-        <li><strong>HealthTech</strong> – Educating & Creating better digital access to care</li>
-        <li><strong>SaaS & B2B Tools</strong> – Empowering small teams with big impact</li>
-      </ul>
-
-      <div class="flex flex-wrap gap-4 mt-6">
+      <div class="flex flex-col gap-6 w-full items-center mt-6">
         <a href="https://docs.google.com/document/d/1i5Ym3dA6gwIcYUSRE9UK3SZyR45wwZws/edit?usp=sharing&ouid=106053597495487753521&rtpof=true&sd=true" download class="bg-blue-500 text-white px-5 py-2 rounded hover:bg-orange-700 transition">
           📄 Download Resume
         </a>
@@ -42,7 +17,49 @@
         </a>
       </div>
     </div>
+
+    <div class="flex-grow">
+      <h1 class="text-3xl font-bold mb-4">About Me</h1>
+
+      <p class="mb-4">
+        I'm <strong>Jimmy Perez</strong>, a full stack developer, Army veteran, and former healthcare specialist turned tech builder. With a background spanning emergency medicine, health insurance, and software engineering, I’ve spent my career solving problems under pressure and building systems that put people first.
+      </p>
+
+      <p class="mb-4">
+        As an Army medic, I learned how to lead in high-stakes situations and developed the discipline and empathy that now shape my approach to technology. Later, in the health insurance world, I scaled a business across 30+ states by designing custom tools, automating workflows, and integrating AI to help people access the care they need.
+      </p>
+
+      <p class="mb-4">
+        Today, I bring that same mindset to software development focused on creating intuitive, responsive applications that make a real difference. Whether it’s improving mental health through data visualization, streamlining service workflows, or building social platforms that foster community, I lead every project with purpose, resilience, and integrity.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-3">💡 Interests</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Veteran Tech</strong> – Giving back to the community that raised me</li>
+        <li><strong>HealthTech</strong> – Educating & Creating better digital access to care</li>
+        <li><strong>SaaS & B2B Tools</strong> – Empowering small teams with big impact</li>
+      </ul>
+    </div>
   </div>
 </div>
+          <section class="bg-white py-4">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8 text-center">Skills & Tools</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-gray-700 text-lg">
+      <div>HTML5</div>
+      <div>CSS3 / Tailwind</div>
+      <div>JavaScript (ES6+)</div>
+      <div>React</div>
+      <div>Node.js</div>
+      <div>Express</div>
+      <div>MongoDB</div>
+      <div>Python</div>
+      <div>PostgreSQL</div>
+      <div>Git & GitHub</div>
+      <div>Heroku / Netlify</div>
+      <div>RESTful APIs</div>
+    </div>
+  </div>
+</section>
 
 <%- include('./partials/footer') %>
