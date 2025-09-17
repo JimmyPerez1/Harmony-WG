@@ -3,74 +3,56 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
-// logging middleware
 const morgan = require("morgan");
-const session = require('express-session');
-
-// Set the port from environment variable or default to 3000
+const cookieParser = require('cookie-parser');
 const port = process.env.PORT || 3000;
-const Project = require('./models/project');
 
 mongoose.connect(process.env.MONGODB_URI);
 
-// Listen for the 'connected' event. 
-// .on is similar to addEventListener in the DOM
 mongoose.connection.on("connected", () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
-// Middleware to "serve"/return static assets, e.g., stylesheets,
-// when requested by the browser.
-// 'public' is the folder name that all static assets will be saved in.
-app.use(express.static('public'));
-// Middleware to parse URL-encoded data from forms
+app.use(cookieParser());
+
+app.use((req, res, next) => {
+  res.locals.lang = req.cookies.lang === 'es' ? 'es' : 'en';
+  next();
+});
+
+app.use("/request-appointment", require("./controllers/appointments"));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
-// Middleware for using HTTP verbs such as PUT or DELETE
 app.use(methodOverride("_method"));
-// Morgan for logging HTTP requests
-app.use(morgan('dev'));
 
-// Sessions are how the server "remembers" which
-// user the curren request is from
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: true
-}));
+app.use(
+  morgan("dev", {
+    skip: (req, res) =>
+      req.path.startsWith("/.well-known") || res.statusCode === 304,
+  })
+);
 
-// If a user is logged in, add the user's doc to req.user and res.locals.user
-app.use(require('./middleware/add-user-to-req-and-locals'));
-
-
-// Routes below
-
-// GET / (root/default) -> Home Page
-app.get('/', async (req, res) => {
-  try {
-    const featuredProjects = await Project.find().limit(5);
-    res.render('home.ejs', { featuredProjects });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Internal Server Error');
-  }
-});
-app.get('/about', (req, res) => {
-  res.render('about');
+app.use((req, res, next) => {
+  res.locals.user = null;
+  next();
 });
 
-// The '/auth' is the "starts with" path.  The
-// paths defined in the router/controller will be
-// appended to the "starts with" path
-app.use('/auth', require('./controllers/auth'));
 
-app.use('/projects', require('./controllers/projects'));
+
+app.get("/.well-known/appspecific/com.chrome.devtools.json", (req, res) => {
+  res.status(204).end();
+});
+
+app.get("/", (req, res) => res.render("home"));
+app.get("/about", (req, res) => res.render("about"));
+app.get("/services", (req, res) => res.render("services"));
+
 
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
-

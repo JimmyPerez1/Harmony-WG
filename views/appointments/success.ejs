@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs') %>
+<main class="pt-20 md:pt-24">
+  <div class="max-w-3xl mx-auto px-4 py-16 text-center">
+    <h1 class="text-2xl font-semibold mb-4">
+      <%= lang === "es" ? "Gracias. Recibimos tu solicitud y te contactaremos
+      pronto." : "Thanks. We received your request and will reach out soon." %>
+    </h1>
+    <a
+      href="/"
+      class="inline-block px-5 py-3 bg-blue-600 text-white rounded-xl"
+    >
+      <%= lang === "es" ? "Inicio" : "Home" %>
+    </a>
+  </div>
+</main>
+<%- include('../partials/footer.ejs') %>

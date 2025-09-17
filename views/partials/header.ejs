@@ -5,14 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <title>Jimmy Portfolio</title>
+  <title>Harmony Wellness Group</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <nav class="bg-black text-white backdrop-blur-md shadow-md px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-      <a href="/" class="text-2xl font-bold">
-        <img src="/jp_logo.png" alt="JP Logo" class="w-12 h-12 object-contain" />
-      </a>
+  <nav class="absolute top-0 left-0 w-full bg-transparent text-white backdrop-blur-sm px-6 py-4 flex justify-between items-center z-50 transition-colors duration-300">
     
+    <a href="/" class="flex items-center space-x-2">
+      <img 
+        src="/harmony_logo.png" 
+        alt="Harmony Wellness Group Logo" 
+        class="w-12 h-12 object-contain" 
+      />
+      <span class="text-xl md:text-2xl font-bold tracking-wide">
+        Harmony Wellness Group
+      </span>
+    </a>
+
     <button id="menu-btn" class="md:hidden focus:outline-none">
       <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
         viewBox="0 0 24 24" stroke="currentColor">
@@ -21,18 +30,12 @@
       </svg>
     </button>
 
-  <div 
-    id="menu" 
-    class="hidden flex flex-col space-y-4 absolute top-16 right-6 bg-black p-4 rounded-md md:static md:flex md:flex-row md:space-y-0 md:space-x-4">
-      <a href="/projects" class=" text-white hover:text-orange-500">Projects</a>
-      <a href="/about" class=" text-white hover:text-orange-500">About</a>
-    <% if (user) { %>
-      <a href="/projects/new" class=" text-white hover:text-orange-500">Add Project</a>
-      <a href="/auth/sign-out" class=" text-white hover:text-orange-500">Sign Out</a>
-      <span class="ml-2 text-white font-semibold"><%= user.name %></span>
-    <% } else { %>
-      <a href="/auth/sign-in" class=" text-white hover:text-orange-500">Admin Login</a>
-    <% } %>
-  </div>
+    <div 
+      id="menu" 
+      class="hidden flex flex-col space-y-4 absolute top-16 right-8 bg-green-800/90 p-4 rounded-md md:bg-transparent md:static md:flex md:flex-row md:space-y-0 md:space-x-6 transition-colors duration-300">
+        <a href="/services" class="text-white hover:text-green-300 transition">Services| </a>
+        <a href="/about" class="text-white hover:text-green-300 transition"> About|</a>
+
+    </div>
   </nav>
 <main>

@@ -1,100 +1,102 @@
 <%- include('./partials/header') %>
-
-
+<main class="pt-20 md:pt-24"> 
 <div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-6 py-10">
   <div class="flex flex-col items-center gap-4">
-      <img 
-        src="https://i.imgur.com/AFZB7Gi_d.png?maxwidth=520&shape=thumb&fidelity=high" 
-        alt="Jimmy Perez in Army Uniform" 
-        class="rounded-lg shadow-lg w-60 h-auto md:w-72 object-cover"
-      />
-      <div class="flex flex-col gap-6 w-full items-center mt-6">
-        <a href="https://docs.google.com/document/d/1i5Ym3dA6gwIcYUSRE9UK3SZyR45wwZws/edit?usp=sharing&ouid=106053597495487753521&rtpof=true&sd=true" download class="bg-blue-500 text-white px-5 py-2 rounded hover:bg-orange-700 transition">
-          📄 Download Resume
-        </a>
-        <a href="https://jimmyperez.poplme.co/hash/IJ927sbF/1/dash" target="_blank" class="bg-blue-500 text-white px-5 py-2 rounded border border-gray-300 hover:bg-orange-700 transition">
-          🤝 Let’s Collaborate
-        </a>
-      </div>
+    <img 
+      src="/images/clinic_team.jpg" 
+      alt="Harmony Wellness Group care team" 
+      class="rounded-lg shadow-lg w-60 h-auto md:w-72 object-cover"
+    />
+
+    <div class="flex flex-col gap-4 w-full items-center mt-6">
+      <a 
+        href="/services" 
+        class="bg-emerald-700 text-white px-5 py-2 rounded hover:bg-emerald-600 transition"
+        aria-label="View services at Harmony Wellness Group"
+      >
+        View Services
+      </a>
+      <a 
+        href="#appointment" 
+        class="bg-white text-emerald-700 border border-emerald-700 px-5 py-2 rounded hover:bg-emerald-50 transition"
+        aria-label="Request an appointment at Harmony Wellness Group"
+      >
+        Request an Appointment
+      </a>
     </div>
+  </div>
 
-    <div class="flex-grow">
-      <h1 class="text-3xl font-bold mb-4">About Me</h1>
+  <div class="flex-grow">
+    <h1 class="text-3xl font-bold mb-4">About Harmony Wellness Group</h1>
 
-      <p class="mb-4">
-        I'm <strong>Jimmy Perez</strong>, a full stack developer, Army veteran, and former healthcare specialist turned tech builder. With a background spanning emergency medicine, health insurance, and software engineering, I’ve spent my career solving problems under pressure and building systems that put people first.
-      </p>
+    <p class="mb-4">
+      Harmony Wellness Group is a modern rehabilitation and wellness clinic dedicated to helping you move, heal, and feel your best. We combine evidence-based care with a calm, supportive environment—so recovery feels reassuring from the moment you walk in.
+    </p>
 
-      <p class="mb-4">
-        As an Army medic, I learned how to lead in high-stakes situations and developed the discipline and empathy that now shape my approach to technology. Later, in the health insurance world, I scaled a business across 30+ states by designing custom tools, automating workflows, and integrating AI to help people access the care they need.
-      </p>
+    <p class="mb-4">
+      Our team collaborates across disciplines to personalize your plan, whether you’re healing from an injury, managing chronic pain, or looking to improve mobility and performance. We focus on practical progress, clear communication, and sustainable results.
+    </p>
 
-      <p class="mb-4">
-        Today, I bring that same mindset to software development focused on creating intuitive, responsive applications that make a real difference. Whether it’s improving mental health through data visualization, streamlining service workflows, or building social platforms that foster community, I lead every project with purpose, resilience, and integrity.
-      </p>
+    <p class="mb-4">
+      From your first assessment to your final session, we meet you where you are and guide you forward—one step at a time.
+    </p>
 
-      <h2 class="text-2xl font-semibold mt-6 mb-3">💡 Interests</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li><strong>Veteran Tech</strong> – Giving back to the community that raised me</li>
-        <li><strong>HealthTech</strong> – Educating & Creating better digital access to care</li>
-        <li><strong>SaaS & B2B Tools</strong> – Empowering small teams with big impact</li>
-      </ul>
-    </div>
+    <h2 class="text-2xl font-semibold mt-6 mb-3">Our Care Philosophy</h2>
+    <ul class="list-disc list-inside space-y-1">
+      <li><strong>Patient-First</strong> — Your goals drive the plan.</li>
+      <li><strong>Evidence-Based</strong> — Methods rooted in the latest research.</li>
+      <li><strong>Collaborative</strong> — Clinicians who listen and adapt.</li>
+      <li><strong>Sustainable</strong> — Progress you can maintain beyond the clinic.</li>
+    </ul>
   </div>
 </div>
-<section class="bg-white py-4">
+
+<section class="bg-white py-8">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-8 text-center">Skills & Tools</h2>
+    <h2 class="text-3xl font-bold mb-8 text-center">Services &amp; Modalities</h2>
+
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-gray-700 text-base">
-  <div class="flex flex-col items-center bg-orange-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10 mb-2" />
-    <span>HTML5</span>
+  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
+    <i data-lucide="clipboard-check" class="w-10 h-10 mb-2"></i>
+    <span>Comprehensive Assessment</span>
   </div>
-  <div class="flex flex-col items-center bg-blue-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10 mb-2" />
-    <span>CSS3 / Tailwind</span>
+
+  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
+    <i data-lucide="activity" class="w-10 h-10 mb-2"></i>
+    <span>Physical Therapy</span>
   </div>
-  <div class="flex flex-col items-center bg-yellow-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10 mb-2" />
-    <span>JavaScript (ES6+)</span>
+
+  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
+    <i data-lucide="bone" class="w-10 h-10 mb-2"></i>
+    <span>Chiropractic Care</span>
   </div>
-  <div class="flex flex-col items-center bg-sky-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10 mb-2" />
-    <span>React</span>
+
+  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
+    <i data-lucide="hand" class="w-10 h-10 mb-2"></i>
+    <span>Manual Therapy</span>
   </div>
-  <div class="flex flex-col items-center bg-lime-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10 mb-2" />
-    <span>Node.js</span>
+
+  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
+    <i data-lucide="dumbbell" class="w-10 h-10 mb-2"></i>
+    <span>Rehab Exercise Programs</span>
   </div>
-  <div class="flex flex-col items-center bg-gray-200 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="w-10 h-10 mb-2 invert" />
-    <span>Express</span>
+
+  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
+    <i data-lucide="stethoscope" class="w-10 h-10 mb-2"></i>
+    <span>Therapeutic Modalities</span>
   </div>
-  <div class="flex flex-col items-center bg-green-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-10 h-10 mb-2" />
-    <span>MongoDB</span>
+
+  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
+    <i data-lucide="ruler" class="w-10 h-10 mb-2"></i>
+    <span>Posture &amp; Ergonomics</span>
   </div>
-  <div class="flex flex-col items-center bg-blue-200 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10 mb-2" />
-    <span>Python</span>
-  </div>
-  <div class="flex flex-col items-center bg-indigo-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-10 h-10 mb-2" />
-    <span>PostgreSQL</span>
-  </div>
-  <div class="flex flex-col items-center bg-gray-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-10 h-10 mb-2" />
-    <span>Git & GitHub</span>
-  </div>
-  <div class="flex flex-col items-center bg-purple-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://img.icons8.com/color/48/000000/netlify.png" class="w-10 h-10 mb-2" />
-    <span>Heroku / Netlify</span>
-  </div>
-  <div class="flex flex-col items-center bg-pink-100 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" class="w-10 h-10 mb-2" />
-    <span>RESTful APIs</span>
+
+  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
+    <i data-lucide="leaf" class="w-10 h-10 mb-2"></i>
+    <span>Wellness Coaching</span>
   </div>
 </div>
 </section>
+</main>
 
 <%- include('./partials/footer') %>

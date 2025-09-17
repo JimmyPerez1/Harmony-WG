@@ -1,0 +1,113 @@
+<%- include('../partials/header.ejs') %>
+<main class="pt-20 md:pt-24">
+  <div class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-2">
+      <%= lang === "es" ? "Pedir una Cita" : "Request an Appointment" %>
+    </h1>
+    <p class="text-gray-600 mb-6">
+      <%= lang === "es" ? "Cuéntanos sobre ti y tu horario preferido." : "Tell us about you and your preferred time." %>
+    </p>
+    <% if (error) { %>
+    <div class="mb-4 text-red-600 text-sm"><%= error %></div>
+    <% } %>
+
+    <form
+      action="/request-appointment"
+      method="POST"
+      class="grid grid-cols-1 gap-4"
+    >
+      <div>
+        <label class="block text-sm font-medium"
+          ><%= lang === "es" ? "Nombre Completo" : "Full Name" %>
+        </label>
+        <input
+          name="name"
+          required
+          class="mt-1 w-full border rounded-xl px-3 py-2"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium"
+            ><%= lang === "es" ? "Correo" : "Email" %>
+          </label>
+          <input
+            name="email"
+            type="email"
+            class="mt-1 w-full border rounded-xl px-3 py-2"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium"
+            ><%= lang === "es" ? "Teléfono" : "Phone" %>
+          </label>
+          <input
+            name="phone"
+            required
+            class="mt-1 w-full border rounded-xl px-3 py-2"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium"
+          ><%= lang === "es" ? "Tipo de Servicio" : "Service Type" %>
+        </label>
+        <select
+          name="serviceType"
+          required
+          class="mt-1 w-full border rounded-xl px-3 py-2"
+        >
+          <option value="">--</option>
+          <option>
+            <%= lang === "es" ? "Consulta Inicial" : "Initial Consultation" %>
+          </option>
+          <option><%= lang === "es" ? "Seguimiento" : "Follow Up" %></option>
+          <option>
+            <%= lang === "es" ? "Sesión Especializada" : "Specialty Session" %>
+          </option>
+        </select>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium"
+            ><%= lang === "es" ? "Fecha Preferida" : "Preferred Date" %></label
+          >
+          <input
+            name="preferredDate"
+            type="date"
+            class="mt-1 w-full border rounded-xl px-3 py-2"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium"
+            ><%= lang === "es" ? "Hora Preferida" : "Preferred Time" %></label
+          >
+          <input
+            name="preferredTime"
+            type="time"
+            class="mt-1 w-full border rounded-xl px-3 py-2"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium"
+          ><%= lang === "es" ? "Notas" : "Notes" %></label
+        >
+        <textarea
+          name="message"
+          rows="4"
+          class="mt-1 w-full border rounded-xl px-3 py-2"
+        ></textarea>
+      </div>
+
+      <button class="mt-2 px-5 py-3 bg-blue-600 text-white rounded-xl">
+        <%= lang === "es" ? "Enviar Solicitud" : "Send Request" %>
+      </button>
+    </form>
+  </div>
+</main>
+<%- include('../partials/footer.ejs') %>
