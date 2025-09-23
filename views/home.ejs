@@ -1,22 +1,32 @@
-<%- include('./partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs', {
+        pageTitle: 'Harmony Wellness Group | Rehabilitation & Wellness Clinic in Tampa, FL',
+        pageDescription: 'Rehabilitation & wellness care designed to help you move, heal, and feel your best.'
+  }) %>
+<body class="antialiased">
+  <%- include('./partials/nav.ejs', { navVariant: 'overlay' }) %>
 
-<section class="relative w-full h-screen overflow-hidden">
-  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
-    <source src="/videos/Harmony_bg.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <section class="relative w-full h-screen overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="/videos/Harmony_bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-<div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-    <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">Restore Balance - Find Harmony.</h1>
-    <p class="text-lg md:text-2xl mt-4 drop-shadow-md">Rehabilitation & wellness care designed to help you move, heal, and feel your best.</p>
-    <a href="/request-appointment" class="mt-6 px-6 py-3 bg-green-800 hover:bg-yellow-500 text-white font-semibold rounded-lg transition">
-      Request an
-      <br>
-      Appointment 
-    </a>
-  </div>
-<div class="absolute top-0 left-0 w-full h-full bg-black/50 z-0"></div>
-</section>
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
 
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg">Restore Balance — Find Harmony.</h1>
+      <p class="text-lg md:text-2xl mt-4 drop-shadow-md">
+        Rehabilitation &amp; wellness care designed to help you move, heal, and feel your best.
+      </p>
+      <a href="/request-appointment"
+         class="mt-6 px-6 py-3 bg-green-800 hover:bg-yellow-500 text-white font-semibold rounded-lg transition text-center">
+        Request an<br/>Appointment
+      </a>
+    </div>
+  </section>
 
-<%- include('./partials/footer.ejs') %>
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

@@ -1,102 +1,54 @@
-<%- include('./partials/header') %>
-<main class="pt-20 md:pt-24"> 
-<div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto px-6 py-10">
-  <div class="flex flex-col items-center gap-4">
-    <img 
-      src="/images/clinic_team.jpg" 
-      alt="Harmony Wellness Group care team" 
-      class="rounded-lg shadow-lg w-60 h-auto md:w-72 object-cover"
-    />
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs', {
+        pageTitle: 'About | Harmony Wellness Group, Tampa FL',
+        pageDescription: 'Learn about Harmony Wellness Group in Tampa—our philosophy, team approach, and commitment to your recovery.'
+  }) %>
+<body class="antialiased">
+  <%- include('./partials/nav.ejs', { navVariant: 'solid' }) %>
 
-    <div class="flex flex-col gap-4 w-full items-center mt-6">
-      <a 
-        href="/services" 
-        class="bg-emerald-700 text-white px-5 py-2 rounded hover:bg-emerald-600 transition"
-        aria-label="View services at Harmony Wellness Group"
-      >
-        View Services
-      </a>
-      <a 
-        href="#appointment" 
-        class="bg-white text-emerald-700 border border-emerald-700 px-5 py-2 rounded hover:bg-emerald-50 transition"
-        aria-label="Request an appointment at Harmony Wellness Group"
-      >
-        Request an Appointment
-      </a>
-    </div>
-  </div>
+<main class="min-h-screen bg-gradient-to-b from-teal-50 via-white to-green-100 pt-12">    <section class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="space-y-6">
+          <img
+            src="/about.JPG"
+            alt="Harmony Wellness Group care team in Tampa, Florida"
+            class="rounded-2xl shadow-lg w-full object-cover"
+          />
+          <div class="flex gap-3">
+            <a href="/services" class="px-5 py-3 rounded-xl bg-emerald-700 text-white hover:bg-emerald-600 transition">
+              View Services
+            </a>
+            <a href="/request-appointment" class="px-5 py-3 rounded-xl border border-emerald-700 text-emerald-700 hover:bg-emerald-50 transition">
+              Request an Appointment
+            </a>
+          </div>
+        </div>
 
-  <div class="flex-grow">
-    <h1 class="text-3xl font-bold mb-4">About Harmony Wellness Group</h1>
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">About Harmony Wellness Group</h1>
+          <p class="text-gray-700 leading-7 mb-4">
+            Harmony Wellness Group is a modern rehabilitation and wellness clinic dedicated to helping you move, heal, and feel your best. We combine evidence-based care with a calm, supportive environment—so recovery feels reassuring from the moment you walk in.
+          </p>
+          <p class="text-gray-700 leading-7 mb-4">
+            Our team collaborates across disciplines to personalize your plan, whether you’re healing from an injury, managing chronic pain, or aiming to improve mobility and performance. We focus on practical progress, clear communication, and sustainable results.
+          </p>
+          <p class="text-gray-700 leading-7 mb-6">
+            From your first assessment to your final session, we meet you where you are and guide you forward—one step at a time.
+          </p>
 
-    <p class="mb-4">
-      Harmony Wellness Group is a modern rehabilitation and wellness clinic dedicated to helping you move, heal, and feel your best. We combine evidence-based care with a calm, supportive environment—so recovery feels reassuring from the moment you walk in.
-    </p>
+          <h2 class="text-2xl font-semibold mt-8 mb-3 text-gray-900">Our Care Philosophy</h2>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-800">
+            <li class="bg-white/90 rounded-xl shadow p-4"><strong>Patient-First</strong> — Your goals drive the plan.</li>
+            <li class="bg-white/90 rounded-xl shadow p-4"><strong>Evidence-Based</strong> — Methods rooted in the latest research.</li>
+            <li class="bg-white/90 rounded-xl shadow p-4"><strong>Collaborative</strong> — Clinicians who listen and adapt.</li>
+            <li class="bg-white/90 rounded-xl shadow p-4"><strong>Sustainable</strong> — Progress you can maintain beyond the clinic.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <p class="mb-4">
-      Our team collaborates across disciplines to personalize your plan, whether you’re healing from an injury, managing chronic pain, or looking to improve mobility and performance. We focus on practical progress, clear communication, and sustainable results.
-    </p>
-
-    <p class="mb-4">
-      From your first assessment to your final session, we meet you where you are and guide you forward—one step at a time.
-    </p>
-
-    <h2 class="text-2xl font-semibold mt-6 mb-3">Our Care Philosophy</h2>
-    <ul class="list-disc list-inside space-y-1">
-      <li><strong>Patient-First</strong> — Your goals drive the plan.</li>
-      <li><strong>Evidence-Based</strong> — Methods rooted in the latest research.</li>
-      <li><strong>Collaborative</strong> — Clinicians who listen and adapt.</li>
-      <li><strong>Sustainable</strong> — Progress you can maintain beyond the clinic.</li>
-    </ul>
-  </div>
-</div>
-
-<section class="bg-white py-8">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-8 text-center">Services &amp; Modalities</h2>
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-gray-700 text-base">
-  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <i data-lucide="clipboard-check" class="w-10 h-10 mb-2"></i>
-    <span>Comprehensive Assessment</span>
-  </div>
-
-  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <i data-lucide="activity" class="w-10 h-10 mb-2"></i>
-    <span>Physical Therapy</span>
-  </div>
-
-  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <i data-lucide="bone" class="w-10 h-10 mb-2"></i>
-    <span>Chiropractic Care</span>
-  </div>
-
-  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <i data-lucide="hand" class="w-10 h-10 mb-2"></i>
-    <span>Manual Therapy</span>
-  </div>
-
-  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <i data-lucide="dumbbell" class="w-10 h-10 mb-2"></i>
-    <span>Rehab Exercise Programs</span>
-  </div>
-
-  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <i data-lucide="stethoscope" class="w-10 h-10 mb-2"></i>
-    <span>Therapeutic Modalities</span>
-  </div>
-
-  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <i data-lucide="ruler" class="w-10 h-10 mb-2"></i>
-    <span>Posture &amp; Ergonomics</span>
-  </div>
-
-  <div class="flex flex-col items-center bg-emerald-50 p-4 rounded-lg shadow-sm hover:scale-105 transition">
-    <i data-lucide="leaf" class="w-10 h-10 mb-2"></i>
-    <span>Wellness Coaching</span>
-  </div>
-</div>
-</section>
-</main>
-
-<%- include('./partials/footer') %>
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

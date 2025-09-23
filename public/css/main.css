@@ -149,6 +149,14 @@ pre {
 Add the correct font size in all browsers.
 */
 
+.service-card img.icon {
+  width: 5rem !important; 
+  height: 5rem !important;  
+  object-fit: contain;
+  flex: 0 0 auto;
+}  
+
+
 small {
   font-size: 80%;
 }

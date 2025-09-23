@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
 
-// one transporter for all sends
 const transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,
   port: Number(process.env.MAIL_PORT || 465),
@@ -13,31 +12,28 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// GET form
 router.get("/", (req, res) => {
   res.render("appointments/new", { error: "" });
 });
 
-// POST send email only
+
 router.post("/", async (req, res) => {
   try {
     const { name, email, phone, serviceType, preferredDate, preferredTime, message } = req.body;
 
-    // light validation
     if (!name || !phone || !serviceType) {
       return res.status(400).render("appointments/new", { error: "Please fill required fields." });
     }
 
     const subject = `New appointment request from ${name}`;
     const text = `
-Name: ${name}
-Email: ${email || ""}
-Phone: ${phone}
-Service: ${serviceType}
-Preferred: ${preferredDate || ""} ${preferredTime || ""}
-Notes: ${message || ""}
-IP: ${req.ip}
-User-Agent: ${req.get("User-Agent") || ""}
+      Name: ${name}
+      Email: ${email || ""}
+      Phone: ${phone}
+      Service: ${serviceType}
+      Preferred: ${preferredDate || ""} ${preferredTime || ""}
+      Notes: ${message || ""}
+      User-Agent: ${req.get("User-Agent") || ""}
     `.trim();
 
     await transporter.sendMail({
