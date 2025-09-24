@@ -261,9 +261,7 @@ Use the modern Firefox focus style for all focusable elements.
   outline: auto;
 }
 
-/*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
+
 
 :-moz-ui-invalid {
   box-shadow: none;
@@ -349,6 +347,32 @@ pre {
 fieldset {
   margin: 0;
   padding: 0;
+}
+
+#service-modal .backdrop { background: rgba(0,0,0,.6); }
+
+/* Toggle buttons for appointment time */
+.appointment-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.appointment-toggle span {
+  display: inline-block;
+  padding: 0.5rem 1rem;           /* px-4 py-2 */
+  border-radius: 0.5rem;          /* rounded-lg */
+  border: 1px solid #d1d5db;      /* border-gray-300 */
+  transition: background .15s, color .15s, border-color .15s, box-shadow .15s;
+}
+.appointment-toggle input:checked + span {
+  background: #0f766e;            /* teal-700 */
+  color: #fff;
+  border-color: #0f766e;
+  box-shadow: inset 0 0 0 2px rgba(15,118,110,.15);
+}
+.appointment-toggle input:focus + span {
+  outline: 2px solid #0f766e;     /* visible focus */
+  outline-offset: 2px;
 }
 
 legend {

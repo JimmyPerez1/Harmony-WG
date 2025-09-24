@@ -2,52 +2,90 @@
 <html lang="en">
   <%- include('./partials/head.ejs', {
         pageTitle: 'About | Harmony Wellness Group, Tampa FL',
-        pageDescription: 'Learn about Harmony Wellness Group in Tampa—our philosophy, team approach, and commitment to your recovery.'
+        pageDescription: 'Learn about Harmony Wellness Group—our philosophy, team approach, and commitment to your recovery.'
   }) %>
-<body class="antialiased">
+
+<body class="flex flex-col min-h-screen antialiased">
   <%- include('./partials/nav.ejs', { navVariant: 'solid' }) %>
 
-<main class="min-h-screen bg-gradient-to-b from-teal-50 via-white to-green-100 pt-12">    <section class="max-w-6xl mx-auto px-6 py-12">
-      <div class="grid md:grid-cols-2 gap-12 items-start">
-        <div class="space-y-6">
-          <img
-            src="/about.JPG"
-            alt="Harmony Wellness Group care team in Tampa, Florida"
-            class="rounded-2xl shadow-lg w-full object-cover"
-          />
-          <div class="flex gap-3">
-            <a href="/services" class="px-5 py-3 rounded-xl bg-emerald-700 text-white hover:bg-emerald-600 transition">
-              View Services
-            </a>
-            <a href="/request-appointment" class="px-5 py-3 rounded-xl border border-emerald-700 text-emerald-700 hover:bg-emerald-50 transition">
-              Request an Appointment
-            </a>
-          </div>
-        </div>
+  <main class="flex-grow bg-gradient-to-b from-teal-50 via-white to-green-100">
+  <!-- Hero / Heading (full width) -->
 
-        <div>
-          <h1 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">About Harmony Wellness Group</h1>
-          <p class="text-gray-700 leading-7 mb-4">
-            Harmony Wellness Group is a modern rehabilitation and wellness clinic dedicated to helping you move, heal, and feel your best. We combine evidence-based care with a calm, supportive environment—so recovery feels reassuring from the moment you walk in.
-          </p>
-          <p class="text-gray-700 leading-7 mb-4">
-            Our team collaborates across disciplines to personalize your plan, whether you’re healing from an injury, managing chronic pain, or aiming to improve mobility and performance. We focus on practical progress, clear communication, and sustainable results.
-          </p>
-          <p class="text-gray-700 leading-7 mb-6">
-            From your first assessment to your final session, we meet you where you are and guide you forward—one step at a time.
-          </p>
+<!-- Content + Sidebar grid -->
+<section class="mx-auto px-6 pb-16 max-w-7xl grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:gap-12">
+  <!-- Left: Main content (2/3) -->
+  <div class="space-y-8">
 
-          <h2 class="text-2xl font-semibold mt-8 mb-3 text-gray-900">Our Care Philosophy</h2>
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-800">
-            <li class="bg-white/90 rounded-xl shadow p-4"><strong>Patient-First</strong> — Your goals drive the plan.</li>
-            <li class="bg-white/90 rounded-xl shadow p-4"><strong>Evidence-Based</strong> — Methods rooted in the latest research.</li>
-            <li class="bg-white/90 rounded-xl shadow p-4"><strong>Collaborative</strong> — Clinicians who listen and adapt.</li>
-            <li class="bg-white/90 rounded-xl shadow p-4"><strong>Sustainable</strong> — Progress you can maintain beyond the clinic.</li>
-          </ul>
-        </div>
+    
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900">About Harmony Wellness Group</h1>
+
+    <article class="bg-white/95 rounded-2xl shadow p-6 md:p-8 space-y-5 text-gray-700 leading-7">
+      <p>Harmony Wellness Group is a modern rehabilitation and wellness clinic dedicated to helping you move,
+        heal, and feel your best. We combine evidence-based care with a calm, supportive environment—so recovery
+        feels reassuring from the moment you walk in.</p>
+      <p>Our team collaborates across disciplines to personalize your plan, whether you’re healing from an injury,
+        managing chronic pain, or aiming to improve mobility and performance. We focus on practical progress,
+        clear communication, and sustainable results.</p>
+      <p>From your first assessment to your final session, we meet you where you are and guide you forward—one step at a time.</p>
+    </article>
+
+    <section class="bg-white/95 rounded-2xl shadow p-6 md:p-8">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4">Our Care Philosophy</h2>
+      <ul class="grid sm:grid-cols-2 gap-3 text-gray-800">
+        <li class="rounded-xl bg-gray-50 p-4 shadow-sm"><strong>Patient-First</strong> — Your goals drive the plan.</li>
+        <li class="rounded-xl bg-gray-50 p-4 shadow-sm"><strong>Evidence-Based</strong> — Methods rooted in research.</li>
+        <li class="rounded-xl bg-gray-50 p-4 shadow-sm"><strong>Collaborative</strong> — Clinicians who listen and adapt.</li>
+        <li class="rounded-xl bg-gray-50 p-4 shadow-sm"><strong>Sustainable</strong> — Progress you can maintain.</li>
+      </ul>
+
+      <div class="mt-6">
+        <a href="/request-appointment"
+           class="inline-block px-5 py-3 bg-teal-700 hover:bg-teal-600 text-white rounded-xl transition">
+          Request an Appointment
+        </a>
       </div>
     </section>
-  </main>
+  </div>
+
+  <!-- Right: Sidebar (1/3) -->
+  <aside class="mt-8 lg:mt-0">
+    <div class="bg-white/95 rounded-2xl shadow p-6 space-y-5 lg:sticky lg:top-24">
+      <h2 class="text-xl font-semibold text-gray-900">Visit Us</h2>
+
+      <div class="text-sm text-gray-700">
+        <p class="font-medium">Harmony Wellness Group</p>
+        <p>3709 W Hamilton Ave STE 1, Tampa, FL 33614</p>
+        <p class="mt-1">
+          <a href="tel:+18135551234" class="text-teal-700 hover:underline">(813) 284-6439</a>
+        </p>
+      </div>
+
+      <div class="rounded-xl overflow-hidden border border-gray-200">
+        <iframe
+          src="https://www.google.com/maps?q=Harmony%20Wellness%20Group%20Tampa&output=embed"
+          width="100%" height="220" style="border:0;" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Map to Harmony Wellness Group"></iframe>
+      </div>
+
+      <div class="border-t border-gray-200 pt-4 text-sm text-gray-700">
+        <div class="grid grid-cols-2 gap-y-1">
+          <span>Mon–Thu</span><span class="text-right">10:00–6:00</span>
+          <span>Fri</span><span class="text-right">10:00–4:00</span>
+          <span>Sat</span><span class="text-right">Closed</span>
+          <span>Sun</span><span class="text-right">Closed</span>
+        </div>
+      </div>
+
+      <a href="https://maps.google.com/?q=Harmony%20Wellness%20Group%20Tampa"
+         target="_blank" rel="noopener"
+         class="block text-center px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-800">
+        Get Directions
+      </a>
+    </div>
+  </aside>
+</section>
+</main>
 
   <%- include('./partials/footer.ejs') %>
 </body>

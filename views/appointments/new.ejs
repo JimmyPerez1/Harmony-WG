@@ -51,9 +51,19 @@
             <label class="block text-sm font-medium">Preferred Date</label>
             <input name="preferredDate" type="date" class="mt-1 w-full border rounded-xl px-3 py-2" />
           </div>
-          <div>
-            <label class="block text-sm font-medium">Preferred Time</label>
-            <input name="preferredTime" type="time" class="mt-1 w-full border rounded-xl px-3 py-2" />
+          
+        <div class="mb-4">
+          <label class="block text-gray-700 font-medium mb-2">Preferred Time</label>
+          <div class="flex gap-4">
+            <label class="appointment-toggle relative cursor-pointer">
+              <input type="radio" name="preferredTime" value="Morning" required>
+              <span>Morning</span>
+            </label>
+
+            <label class="appointment-toggle relative cursor-pointer">
+              <input type="radio" name="preferredTime" value="Afternoon">
+              <span>Afternoon</span>
+            </label>
           </div>
         </div>
 

@@ -4,172 +4,249 @@
         pageTitle: 'Services | Harmony Wellness Group, Tampa FL',
         pageDescription: 'Auto accident & personal injury care, vitamin serums, physical & DOT exams, workers’ comp, lab tests, weight loss, and intra-articular injections in Tampa.'
   }) %>
-<body class="antialiased">
+<body class=" flex flex-col min-h-screen antialiased">
   <%- include('./partials/nav.ejs', { navVariant: 'solid' }) %>
 
-  <main class="min-h-screen bg-gradient-to-b from-teal-50 via-white to-green-100">
-    <section class="max-w-6xl mx-auto px-6 pt-6 pb-12">
+  <main class="flex-grow bg-gradient-to-b from-teal-50 via-white to-green-100">
+    <section class="max-w-6xl mx-auto px-6 pt-6 pb-8">
       <h1 class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Our Services</h1>
       <p class="text-gray-700 mb-8">Tap a service to learn more.</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-  <!-- Auto Accident -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="Auto Accident Care"
-    data-desc="Evaluation and treatment for collision-related injuries (whiplash, back/neck pain). Thorough documentation; coordination with insurers/attorneys."
-    data-image="/images/autocard.JPG">
-    <img src="/icons/autoicon.png" alt="Auto accident care icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Auto Accident</h2>
-      <p class="text-sm text-gray-600 leading-snug">Assessment, documentation, recovery planning.</p>
-    </div>
-  </button>
+        <!-- Auto Accident -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="Auto Accident Care"
+          data-desc="Evaluation and treatment for collision-related injuries (whiplash, back/neck pain). Thorough documentation; coordination with insurers/attorneys."
+          data-image="/images/autocard.JPG">
+          <img src="/icons/autoicon.png" alt="Auto accident care icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Auto Accident</h2>
+            <p class="text-sm text-gray-600 leading-snug">Assessment, documentation, recovery planning.</p>
+          </div>
+        </button>
 
-  <!-- Personal Injury -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="Personal Injury Care"
-    data-desc="Support for slip-and-fall, sports, or other acute injuries. Reduce pain, restore function, and return safely to activity."
-    data-image="/images/injurycard.JPG">
-    <img src="/icons/injuryicon.png" alt="Personal injury icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Personal Injury</h2>
-      <p class="text-sm text-gray-600 leading-snug">Targeted rehab for sudden injuries.</p>
-    </div>
-  </button>
+        <!-- Personal Injury -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="Personal Injury Care"
+          data-desc="Support for slip-and-fall, sports, or other acute injuries. Reduce pain, restore function, and return safely to activity."
+          data-image="/images/injurycard.JPG">
+          <img src="/icons/injuryicon.png" alt="Personal injury icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Personal Injury</h2>
+            <p class="text-sm text-gray-600 leading-snug">Targeted rehab for sudden injuries.</p>
+          </div>
+        </button>
 
-  <!-- Vitamin Serums -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="Vitamin Serums (IV)"
-    data-desc="Hydration and vitamin IV support (e.g., B12 blends). We’ll discuss goals and whether IV therapy is appropriate for you."
-    data-image="/images/serumcard.JPG">
-    <img src="/icons/serumsicon.png" alt="Vitamin serums icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Vitamin Serums</h2>
-      <p class="text-sm text-gray-600 leading-snug">Hydration &amp; vitamin IV support.</p>
-    </div>
-  </button>
+        <!-- Vitamin Serums -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="Vitamin Serums (IV)"
+          data-desc="Hydration and vitamin IV support (e.g., B12 blends). We’ll discuss goals and whether IV therapy is appropriate for you."
+          data-image="/images/serumcard.JPG">
+          <img src="/icons/serumsicon.png" alt="Vitamin serums icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Vitamin Serums</h2>
+            <p class="text-sm text-gray-600 leading-snug">Hydration &amp; vitamin IV support.</p>
+          </div>
+        </button>
 
-  <!-- Physical Exams -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="Physical Exams"
-    data-desc="Comprehensive physicals for wellness, school/sports, and clearances. Prompt results and documentation."
-    data-image="/images/examcard.JPG">
-    <img src="/icons/examsicon.png" alt="Physical exams icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Physical Exams</h2>
-      <p class="text-sm text-gray-600 leading-snug">Wellness, school/sports, clearances.</p>
-    </div>
-  </button>
+        <!-- Physical Exams -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="Physical Exams"
+          data-desc="Comprehensive physicals for wellness, school/sports, and clearances. Prompt results and documentation."
+          data-image="/images/examcard.JPG">
+          <img src="/icons/examsicon.png" alt="Physical exams icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Physical Exams</h2>
+            <p class="text-sm text-gray-600 leading-snug">Wellness, school/sports, clearances.</p>
+          </div>
+        </button>
 
-  <!-- Work Compensation -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="Workers’ Compensation"
-    data-desc="Evaluation and treatment for work-related injuries, return-to-work planning, and required documentation with your case manager."
-    data-image="/images/wcompcard.JPG">
-    <img src="/icons/wcompicon.png" alt="Workers’ compensation icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Work Compensation</h2>
-      <p class="text-sm text-gray-600 leading-snug">Work injuries, paperwork, RTW planning.</p>
-    </div>
-  </button>
+        <!-- Work Compensation -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="Workers’ Compensation"
+          data-desc="Evaluation and treatment for work-related injuries, return-to-work planning, and required documentation with your case manager."
+          data-image="/images/wcompcard.JPG">
+          <img src="/icons/wcompicon.png" alt="Workers’ compensation icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Work Compensation</h2>
+            <p class="text-sm text-gray-600 leading-snug">Work injuries, paperwork, RTW planning.</p>
+          </div>
+        </button>
 
-  <!-- DOT Exams -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="DOT Exams"
-    data-desc="DOT driver physicals. Bring photo ID and any required medical documentation or devices."
-    data-image="/images/dotcard.JPG">
-    <img src="/icons/doticon.png" alt="DOT exams icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">DOT Exams</h2>
-      <p class="text-sm text-gray-600 leading-snug">Driver physicals and certification.</p>
-    </div>
-  </button>
+        <!-- DOT Exams -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="DOT Exams"
+          data-desc="DOT driver physicals. Bring photo ID and any required medical documentation or devices."
+          data-image="/images/dotcard.JPG">
+          <img src="/icons/doticon.png" alt="DOT exams icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">DOT Exams</h2>
+            <p class="text-sm text-gray-600 leading-snug">Driver physicals and certification.</p>
+          </div>
+        </button>
 
-  <!-- Medical Laboratory Test -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="Medical Laboratory Tests"
-    data-desc="On-site and referral lab testing (including bloodwork) with clear follow-up and next-step guidance."
-    data-image="/images/labcard.JPG">
-    <img src="/icons/labicon.png" alt="Medical laboratory icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Medical Laboratory Test</h2>
-      <p class="text-sm text-gray-600 leading-snug">Convenient testing &amp; results.</p>
-    </div>
-  </button>
+        <!-- Medical Laboratory Test -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="Medical Laboratory Tests"
+          data-desc="On-site and referral lab testing (including bloodwork) with clear follow-up and next-step guidance."
+          data-image="/images/labcard.JPG">
+          <img src="/icons/labicon.png" alt="Medical laboratory icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Medical Laboratory Test</h2>
+            <p class="text-sm text-gray-600 leading-snug">Convenient testing &amp; results.</p>
+          </div>
+        </button>
 
-  <!-- Weight Loss -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="Weight Loss Support"
-    data-desc="Personalized strategies—nutrition, activity planning, and when appropriate, medical options—focused on safe, sustainable progress."
-    data-image="/images/wlosscard.JPG">
-    <img src="/icons/wlossicon.png" alt="Weight loss icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Weight Loss</h2>
-      <p class="text-sm text-gray-600 leading-snug">Safe, sustainable plans.</p>
-    </div>
-  </button>
+        <!-- Weight Loss -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="Weight Loss Support"
+          data-desc="Personalized strategies—nutrition, activity planning, and when appropriate, medical options—focused on safe, sustainable progress."
+          data-image="/images/wlosscard.JPG">
+          <img src="/icons/wlossicon.png" alt="Weight loss icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Weight Loss</h2>
+            <p class="text-sm text-gray-600 leading-snug">Safe, sustainable plans.</p>
+          </div>
+        </button>
 
-  <!-- Intra-articular Injection -->
-  <button
-    class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-    data-title="Intra-articular Injection"
-    data-desc="Joint injections (as clinically appropriate) to help manage pain and inflammation. We’ll review risks, benefits, and after-care instructions."
-    data-image="/images/injcard.JPG">
-    <img src="/icons/injicon.png" alt="Intra-articular injection icon" class="icon">
-    <div>
-      <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Intra-articular Injection</h2>
-      <p class="text-sm text-gray-600 leading-snug">Joint pain &amp; inflammation care.</p>
-    </div>
-  </button>
+        <!-- Intra-articular Injection -->
+        <button
+          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+          data-title="Intra-articular Injection"
+          data-desc="Joint injections (as clinically appropriate) to help manage pain and inflammation. We’ll review risks, benefits, and after-care instructions."
+          data-image="/images/injcard.JPG">
+          <img src="/icons/injicon.png" alt="Intra-articular injection icon" class="icon">
+          <div>
+            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Intra-articular Injection</h2>
+            <p class="text-sm text-gray-600 leading-snug">Joint pain &amp; inflammation care.</p>
+          </div>
+        </button>
 
-</div>
       </div>
-    </div>
-  </div>
 
+      <div class="mt-10">
+        <a href="/request-appointment" class="inline-block px-5 py-3 bg-teal-700 hover:bg-teal-600 text-white rounded-xl transition">
+          Request an Appointment
+        </a>
+      </div>
+    </section>
+  </main>
+
+  
   <%- include('./partials/footer.ejs') %>
 
-  <script>
-  (function(){
-    var modal = document.getElementById('service-modal');
-    var title = document.getElementById('service-title');
-    var desc  = document.getElementById('service-desc');
-    var img   = document.getElementById('service-img');
-    var closeBtn  = document.getElementById('modal-close');
-    var cancelBtn = document.getElementById('modal-cancel');
+<script>
+(function () {
+  function openServicePopup(opts) {
+    // 1) Open a centered popup
+    var w = 560, h = 640;
+    var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
+    var dualScreenTop  = window.screenTop  !== undefined ? window.screenTop  : screen.top;
+    var width  = window.innerWidth  || document.documentElement.clientWidth  || screen.width;
+    var height = window.innerHeight || document.documentElement.clientHeight || screen.height;
+    var left = ((width - w) / 2) + dualScreenLeft;
+    var top  = ((height - h) / 2) + dualScreenTop;
 
-    function openModal(t, d, src, alt) {
-      title.textContent = t || 'Service';
-      desc.textContent  = d || '';
-      if (src) { img.src = src; } else { img.removeAttribute('src'); }
-      img.alt = alt || (t ? (t + ' image') : 'Service image');
-      modal.classList.remove('hidden'); modal.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-      modal.classList.add('hidden'); modal.classList.remove('flex');
-      document.body.style.overflow = '';
+    var features = [
+      'scrollbars=yes','resizable=yes','status=no','toolbar=no','menubar=no',
+      'width='+w,'height='+h,'top='+Math.max(0,top),'left='+Math.max(0,left)
+    ].join(',');
+
+    var win = window.open('', 'harmonyServiceInfo', features);
+    if (!win) {
+      alert('Please allow pop-ups for this site to view service details.');
+      return;
     }
 
-    document.addEventListener('click', function(e){
-      var btn = e.target.closest('button[data-title]');
-      if (!btn) return;
-      var thumb = btn.querySelector('img');
-      openModal(btn.dataset.title, btn.dataset.desc, btn.dataset.image, thumb ? thumb.alt : '');
-    });
-    [closeBtn, cancelBtn].forEach(function(el){ if (el) el.addEventListener('click', closeModal); });
-    modal.addEventListener('click', function(e){ if (e.target === modal || e.target === modal.firstElementChild) closeModal(); });
-    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
-  })();
-  </script>
+    // 2) Simple HTML content (NO <script> tag inside this string!)
+    var title = (opts.title || 'Service').replace(/</g,'&lt;');
+    var desc  = (opts.desc  || '').replace(/</g,'&lt;');
+    var img   = opts.image || '';
+    var alt   = opts.alt   || (title + ' image');
+
+    var html = `
+      <!doctype html>
+      <html lang="en">
+      <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>${title} | Harmony Wellness Group</title>
+        <style>
+          :root { color-scheme: light; }
+          body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:#f7faf9; color:#111827; }
+          .wrap { max-width: 680px; margin:0 auto; padding:16px; }
+          .card { background:#fff; border-radius:16px; box-shadow: 0 8px 24px rgba(0,0,0,.08); overflow:hidden; }
+          .img { width:100%; height:240px; object-fit:cover; background:#f0f2f3; display:block; }
+          .content { padding:16px 16px 20px; }
+          h1 { font-size:20px; font-weight:700; margin:0 0 8px; }
+          p { margin:0 0 12px; line-height:1.55; color:#374151; }
+          .row { display:flex; gap:8px; margin-top:12px; }
+          .btn { appearance:none; cursor:pointer; border-radius:12px; padding:10px 14px; font-weight:600; border:1px solid transparent; text-decoration:none; display:inline-block; }
+          .primary { background:#0f766e; color:#fff; }
+          .primary:hover { background:#115e59; }
+          .ghost { background:#fff; color:#111827; border-color:#e5e7eb; }
+          .ghost:hover { background:#f9fafb; }
+          header { padding:10px 16px; display:flex; justify-content:space-between; align-items:center; }
+          .close { border:none; background:transparent; font-size:20px; line-height:1; cursor:pointer; color:#6b7280; }
+          .close:hover { color:#111827; }
+        </style>
+      </head>
+      <body>
+        <div class="wrap">
+          <header>
+            <strong>Harmony Wellness Group</strong>
+            <button class="close" aria-label="Close" onclick="window.close()">×</button>
+          </header>
+          <div class="card">
+            ${img ? `<img class="img" src="${img}" alt="${alt}"/>` : ''}
+            <div class="content">
+              <h1>${title}</h1>
+              <p>${desc}</p>
+              <div class="row">
+                <a class="btn primary" href="/request-appointment" target="_blank" rel="noopener">Request Appointment</a>
+                <button class="btn ghost" onclick="window.close()">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+      </html>`;
+
+    // 3) Write and focus
+    win.document.open();
+    win.document.write(html);
+    win.document.close();
+    win.focus();
+
+    // Accessibility (no <script> tag inside popup): attach from opener
+    try {
+      win.addEventListener('keydown', function(e){ if (e.key === 'Escape') win.close(); });
+    } catch(_) {}
+  }
+
+  // Delegate clicks for all service buttons
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-title]');
+    if (!btn) return;
+
+    var data = {
+      title: btn.dataset.title || btn.getAttribute('data-title'),
+      desc:  btn.dataset.desc  || btn.getAttribute('data-desc'),
+      image: btn.dataset.image || btn.getAttribute('data-image'),
+      alt:   (btn.querySelector('img') && btn.querySelector('img').alt) || ''
+    };
+    openServicePopup(data);
+  });
+})();
+</script>
 </body>
 </html>
