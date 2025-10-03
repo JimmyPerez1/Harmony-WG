@@ -54,7 +54,7 @@ app.get('/about', (req, res) => {
 app.get('/services', (req, res) => {
   res.render('services', {
     pageTitle: 'Services at Harmony Wellness Group | Tampa Clinic',
-    pageDescription: 'Learn about services offered atHarmony Wellness Group in Tampa, Florida. Our care philosophy blends evidence-based rehabilitation with compassionate support.'
+    pageDescription: 'Learn about services offered at Harmony Wellness Group in Tampa, Florida. Our care philosophy blends evidence-based rehabilitation with compassionate support.'
   });
 });
 
