@@ -9,136 +9,136 @@
 
   <main class="flex-grow bg-gradient-to-b from-teal-50 via-white to-green-100">
     <section class="max-w-6xl mx-auto px-6 pt-6 pb-8">
-      <h1 class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Our Services</h1>
-      <p class="text-gray-700 mb-8">Tap a service to learn more.</p>
+  <h1 class="text-3xl md:text-4xl font-bold mb-2 text-gray-900"><%= t('services.title') %></h1>
+  <p class="text-gray-700 mb-8"><%= t('services.intro') %></p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-        <!-- Auto Accident -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="Auto Accident Care"
-          data-desc="Evaluation and treatment for collision-related injuries (whiplash, back/neck pain). Thorough documentation; coordination with insurers/attorneys."
-          data-image="/images/autocard.JPG">
-          <img src="/icons/autoicon.png" alt="Auto accident care icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Auto Accident</h2>
-            <p class="text-sm text-gray-600 leading-snug">Assessment, documentation, recovery planning.</p>
-          </div>
-        </button>
-
-        <!-- Personal Injury -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="Personal Injury Care"
-          data-desc="Support for slip-and-fall, sports, or other acute injuries. Reduce pain, restore function, and return safely to activity."
-          data-image="/images/injurycard.JPG">
-          <img src="/icons/injuryicon.png" alt="Personal injury icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Personal Injury</h2>
-            <p class="text-sm text-gray-600 leading-snug">Targeted rehab for sudden injuries.</p>
-          </div>
-        </button>
-
-        <!-- Vitamin Serums -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="Vitamin Serums (IV)"
-          data-desc="Hydration and vitamin IV support (e.g., B12 blends). We’ll discuss goals and whether IV therapy is appropriate for you."
-          data-image="/images/serumcard.JPG">
-          <img src="/icons/serumsicon.png" alt="Vitamin serums icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Vitamin Serums</h2>
-            <p class="text-sm text-gray-600 leading-snug">Hydration &amp; vitamin IV support.</p>
-          </div>
-        </button>
-
-        <!-- Physical Exams -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="Physical Exams"
-          data-desc="Comprehensive physicals for wellness, school/sports, and clearances. Prompt results and documentation."
-          data-image="/images/examcard.JPG">
-          <img src="/icons/examsicon.png" alt="Physical exams icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Physical Exams</h2>
-            <p class="text-sm text-gray-600 leading-snug">Wellness, school/sports, clearances.</p>
-          </div>
-        </button>
-
-        <!-- Work Compensation -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="Workers’ Compensation"
-          data-desc="Evaluation and treatment for work-related injuries, return-to-work planning, and required documentation with your case manager."
-          data-image="/images/wcompcard.JPG">
-          <img src="/icons/wcompicon.png" alt="Workers’ compensation icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Work Compensation</h2>
-            <p class="text-sm text-gray-600 leading-snug">Work injuries, paperwork, RTW planning.</p>
-          </div>
-        </button>
-
-        <!-- DOT Exams -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="DOT Exams"
-          data-desc="DOT driver physicals. Bring photo ID and any required medical documentation or devices."
-          data-image="/images/dotcard.JPG">
-          <img src="/icons/doticon.png" alt="DOT exams icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">DOT Exams</h2>
-            <p class="text-sm text-gray-600 leading-snug">Driver physicals and certification.</p>
-          </div>
-        </button>
-
-        <!-- Medical Laboratory Test -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="Medical Laboratory Tests"
-          data-desc="On-site and referral lab testing (including bloodwork) with clear follow-up and next-step guidance."
-          data-image="/images/labcard.JPG">
-          <img src="/icons/labicon.png" alt="Medical laboratory icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Medical Laboratory Test</h2>
-            <p class="text-sm text-gray-600 leading-snug">Convenient testing &amp; results.</p>
-          </div>
-        </button>
-
-        <!-- Weight Loss -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="Weight Loss Support"
-          data-desc="Personalized strategies—nutrition, activity planning, and when appropriate, medical options—focused on safe, sustainable progress."
-          data-image="/images/wlosscard.JPG">
-          <img src="/icons/wlossicon.png" alt="Weight loss icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Weight Loss</h2>
-            <p class="text-sm text-gray-600 leading-snug">Safe, sustainable plans.</p>
-          </div>
-        </button>
-
-        <!-- Intra-articular Injection -->
-        <button
-          class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
-          data-title="Intra-articular Injection"
-          data-desc="Joint injections (as clinically appropriate) to help manage pain and inflammation. We’ll review risks, benefits, and after-care instructions."
-          data-image="/images/injcard.JPG">
-          <img src="/icons/injicon.png" alt="Intra-articular injection icon" class="icon">
-          <div>
-            <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700">Intra-articular Injection</h2>
-            <p class="text-sm text-gray-600 leading-snug">Joint pain &amp; inflammation care.</p>
-          </div>
-        </button>
-
+    <!-- Auto Accident -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.auto.title') %>"
+      data-desc="<%= t('pages.services.auto.desc') || t('services.auto.blurb') %>"
+      data-image="/images/autocard.JPG">
+      <img src="/icons/autoicon.png" alt="<%= t('services.auto.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.auto.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.auto.blurb') %></p>
       </div>
+    </button>
 
-      <div class="mt-10">
-        <a href="/request-appointment" class="inline-block px-5 py-3 bg-teal-700 hover:bg-teal-600 text-white rounded-xl transition">
-          Request an Appointment
-        </a>
+    <!-- Personal Injury -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.injury.title') %>"
+      data-desc="<%= t('services.injury.blurb') %>"
+      data-image="/images/injurycard.JPG">
+      <img src="/icons/injuryicon.png" alt="<%= t('services.injury.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.injury.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.injury.blurb') %></p>
       </div>
-    </section>
+    </button>
+
+    <!-- Vitamin Serums -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.serums.title') %>"
+      data-desc="<%= t('services.serums.blurb') %>"
+      data-image="/images/serumcard.JPG">
+      <img src="/icons/serumsicon.png" alt="<%= t('services.serums.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.serums.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.serums.blurb') %></p>
+      </div>
+    </button>
+
+    <!-- Physical Exams -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.exams.title') %>"
+      data-desc="<%= t('services.exams.blurb') %>"
+      data-image="/images/examcard.JPG">
+      <img src="/icons/examsicon.png" alt="<%= t('services.exams.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.exams.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.exams.blurb') %></p>
+      </div>
+    </button>
+
+    <!-- Work Compensation -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.wcomp.title') %>"
+      data-desc="<%= t('services.wcomp.blurb') %>"
+      data-image="/images/wcompcard.JPG">
+      <img src="/icons/wcompicon.png" alt="<%= t('services.wcomp.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.wcomp.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.wcomp.blurb') %></p>
+      </div>
+    </button>
+
+    <!-- DOT Exams -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.dot.title') %>"
+      data-desc="<%= t('services.dot.blurb') %>"
+      data-image="/images/dotcard.JPG">
+      <img src="/icons/doticon.png" alt="<%= t('services.dot.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.dot.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.dot.blurb') %></p>
+      </div>
+    </button>
+
+    <!-- Medical Laboratory Test -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.lab.title') %>"
+      data-desc="<%= t('services.lab.blurb') %>"
+      data-image="/images/labcard.JPG">
+      <img src="/icons/labicon.png" alt="<%= t('services.lab.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.lab.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.lab.blurb') %></p>
+      </div>
+    </button>
+
+    <!-- Weight Loss -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.weight.title') %>"
+      data-desc="<%= t('services.weight.blurb') %>"
+      data-image="/images/wlosscard.JPG">
+      <img src="/icons/wlossicon.png" alt="<%= t('services.weight.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.weight.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.weight.blurb') %></p>
+      </div>
+    </button>
+
+    <!-- Intra-articular Injection -->
+    <button
+      class="service-card group p-6 rounded-2xl shadow bg-white text-left hover:shadow-lg transition flex items-center gap-5 min-h-[120px]"
+      data-title="<%= t('services.inj.title') %>"
+      data-desc="<%= t('services.inj.blurb') %>"
+      data-image="/images/injcard.JPG">
+      <img src="/icons/injicon.png" alt="<%= t('services.inj.title') %> icon" class="icon">
+      <div>
+        <h2 class="text-lg font-semibold mb-1 text-gray-900 group-hover:text-teal-700"><%= t('services.inj.title') %></h2>
+        <p class="text-sm text-gray-600 leading-snug"><%= t('services.inj.blurb') %></p>
+      </div>
+    </button>
+
+  </div>
+
+  <div class="mt-10">
+    <a href="/request-appointment" class="inline-block px-5 py-3 bg-teal-700 hover:bg-teal-600 text-white rounded-xl transition">
+      <%= t('services.request') %>
+    </a>
+  </div>
+</section>
   </main>
 
   

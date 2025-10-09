@@ -17,25 +17,29 @@
   <div class="space-y-8">
 
     
-<h1 class="text-3xl md:text-4xl font-bold text-gray-900">About Harmony Wellness Group</h1>
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900"><%= t('about.title') %></h1>
 
     <article class="bg-white/95 rounded-2xl shadow p-6 md:p-8 space-y-5 text-gray-700 leading-7">
-      <p>Harmony Wellness Group is a modern rehabilitation and wellness clinic dedicated to helping you move,
-        heal, and feel your best. We combine evidence-based care with a calm, supportive environment—so recovery
-        feels reassuring from the moment you walk in.</p>
-      <p>Our team collaborates across disciplines to personalize your plan, whether you’re healing from an injury,
-        managing chronic pain, or aiming to improve mobility and performance. We focus on practical progress,
-        clear communication, and sustainable results.</p>
-      <p>From your first assessment to your final session, we meet you where you are and guide you forward—one step at a time.</p>
-    </article>
+  <p><%= t('about.p1') %></p>
+  <p><%= t('about.p2') %></p>
+  <p><%= t('about.p3') %></p>
+</article>
 
     <section class="bg-white/95 rounded-2xl shadow p-6 md:p-8">
-      <h2 class="text-2xl font-semibold text-gray-900 mb-4">Our Care Philosophy</h2>
+  <h2 class="text-2xl font-semibold text-gray-900 mb-4"><%= t('about.philosophy') %></h2>
       <ul class="grid sm:grid-cols-2 gap-3 text-gray-800">
-        <li class="rounded-xl bg-gray-50 p-4 shadow-sm"><strong>Patient-First</strong> — Your goals drive the plan.</li>
-        <li class="rounded-xl bg-gray-50 p-4 shadow-sm"><strong>Evidence-Based</strong> — Methods rooted in research.</li>
-        <li class="rounded-xl bg-gray-50 p-4 shadow-sm"><strong>Collaborative</strong> — Clinicians who listen and adapt.</li>
-        <li class="rounded-xl bg-gray-50 p-4 shadow-sm"><strong>Sustainable</strong> — Progress you can maintain.</li>
+        <li class="rounded-xl bg-gray-50 p-4 shadow-sm">
+          <strong><%= t('about.pillars.patient.title') %></strong> — <%= t('about.pillars.patient.blurb') %>
+        </li>
+        <li class="rounded-xl bg-gray-50 p-4 shadow-sm">
+          <strong><%= t('about.pillars.evidence.title') %></strong> — <%= t('about.pillars.evidence.blurb') %>
+        </li>
+        <li class="rounded-xl bg-gray-50 p-4 shadow-sm">
+          <strong><%= t('about.pillars.collab.title') %></strong> — <%= t('about.pillars.collab.blurb') %>
+        </li>
+        <li class="rounded-xl bg-gray-50 p-4 shadow-sm">
+          <strong><%= t('about.pillars.sustain.title') %></strong> — <%= t('about.pillars.sustain.blurb') %>
+        </li>
       </ul>
 
       <div class="mt-6">
@@ -50,7 +54,7 @@
   <!-- Right: Sidebar (1/3) -->
   <aside class="mt-8 lg:mt-0">
     <div class="bg-white/95 rounded-2xl shadow p-6 space-y-5 lg:sticky lg:top-24">
-      <h2 class="text-xl font-semibold text-gray-900">Visit Us</h2>
+      <h2 class="text-xl font-semibold text-gray-900"><%= t('about.visitUs') %></h2>
 
       <div class="text-sm text-gray-700">
         <p class="font-medium">Harmony Wellness Group</p>
@@ -70,17 +74,17 @@
 
       <div class="border-t border-gray-200 pt-4 text-sm text-gray-700">
         <div class="grid grid-cols-2 gap-y-1">
-          <span>Mon–Thu</span><span class="text-right">10:00–6:00</span>
-          <span>Fri</span><span class="text-right">10:00–4:00</span>
-          <span>Sat</span><span class="text-right">Closed</span>
-          <span>Sun</span><span class="text-right">Closed</span>
+          <span>Mon–Thu</span><span class="text-right"><%= t('about.hours.monThu') %></span>
+          <span>Fri</span><span class="text-right"><%= t('about.hours.fri') %></span>
+          <span>Sat</span><span class="text-right"><%= t('about.hours.sat') %></span>
+          <span>Sun</span><span class="text-right"><%= t('about.hours.sun') %></span>
         </div>
       </div>
 
       <a href="https://maps.google.com/?q=Harmony%20Wellness%20Group%20Tampa"
-         target="_blank" rel="noopener"
-         class="block text-center px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-800">
-        Get Directions
+        target="_blank" rel="noopener"
+        class="block text-center px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-800">
+        <%= t('about.getDirections') %>
       </a>
     </div>
   </aside>

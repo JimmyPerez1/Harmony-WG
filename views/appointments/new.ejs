@@ -1,79 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= lang || 'en' %>">
   <%- include('../partials/head.ejs', {
-        pageTitle: 'Request an Appointment | Harmony Wellness Group, Tampa FL',
-        pageDescription: 'Request an appointment at Harmony Wellness Group in Tampa.'
+        pageTitle: t('appt.title') + ' | Harmony Wellness Group, Tampa FL',
+        pageDescription: t('appt.intro')
   }) %>
 
 <body class="antialiased">
   <%- include('../partials/nav.ejs', { navVariant: 'solid' }) %>
 
-<main class="min-h-screen bg-gradient-to-b from-teal-50 via-white to-green-100 pt-12">    <div class="max-w-3xl mx-auto px-6 py-12 bg-white/90 rounded-2xl shadow">
-      <h1 class="text-3xl font-bold mb-2">Request an Appointment</h1>
-      <p class="text-gray-600 mb-6">Tell us about you and your preferred time.</p>
-      <% if (error) { %><div class="mb-4 text-red-600 text-sm"><%= error %></div><% } %>
+  <main class="min-h-screen bg-gradient-to-b from-teal-50 via-white to-green-100 pt-12">
+    <div class="max-w-3xl mx-auto px-6 py-12 bg-white/90 rounded-2xl shadow">
+      <h1 class="text-3xl font-bold mb-2"><%= t('appt.title') %></h1>
+      <p class="text-gray-600 mb-6"><%= t('appt.intro') %></p>
+
+      <% if (error) { %>
+        <div class="mb-4 text-red-600 text-sm"><%= error %></div>
+      <% } %>
 
       <form action="/request-appointment" method="POST" class="grid grid-cols-1 gap-4">
         <div>
-          <label class="block text-sm font-medium">Full Name</label>
+          <label class="block text-sm font-medium"><%= t('appt.name') %></label>
           <input name="name" required class="mt-1 w-full border rounded-xl px-3 py-2" />
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm font-medium">Email</label>
+            <label class="block text-sm font-medium"><%= t('appt.email') %></label>
             <input name="email" type="email" class="mt-1 w-full border rounded-xl px-3 py-2" />
           </div>
           <div>
-            <label class="block text-sm font-medium">Phone</label>
+            <label class="block text-sm font-medium"><%= t('appt.phone') %></label>
             <input name="phone" required class="mt-1 w-full border rounded-xl px-3 py-2" />
           </div>
         </div>
 
         <div>
-          <label class="block text-sm font-medium">Service Type</label>
+          <label class="block text-sm font-medium"><%= t('appt.serviceType') %></label>
           <select name="serviceType" required class="mt-1 w-full border rounded-xl px-3 py-2">
-            <option value="">-- Choose a service --</option>
-            <option>Auto Accident</option>
-            <option>Personal Injury</option>
-            <option>Vitamin Serums</option>
-            <option>Physical Exams</option>
-            <option>Work Compensation</option>
-            <option>DOT Exams</option>
-            <option>Medical Laboratory Test</option>
-            <option>Weight Loss</option>
-            <option>Intra-articular Injection</option>
+            <option value=""><%= t('appt.serviceType') %></option>
+            <option><%= t('appt.options.auto') %></option>
+            <option><%= t('appt.options.injury') %></option>
+            <option><%= t('appt.options.serums') %></option>
+            <option><%= t('appt.options.exams') %></option>
+            <option><%= t('appt.options.wcomp') %></option>
+            <option><%= t('appt.options.dot') %></option>
+            <option><%= t('appt.options.lab') %></option>
+            <option><%= t('appt.options.weight') %></option>
+            <option><%= t('appt.options.inj') %></option>
           </select>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm font-medium">Preferred Date</label>
+            <label class="block text-sm font-medium"><%= t('appt.preferredDate') %></label>
             <input name="preferredDate" type="date" class="mt-1 w-full border rounded-xl px-3 py-2" />
           </div>
-          
-        <div class="mb-4">
-          <label class="block text-gray-700 font-medium mb-2">Preferred Time</label>
-          <div class="flex gap-4">
-            <label class="appointment-toggle relative cursor-pointer">
-              <input type="radio" name="preferredTime" value="Morning" required>
-              <span>Morning</span>
-            </label>
 
-            <label class="appointment-toggle relative cursor-pointer">
-              <input type="radio" name="preferredTime" value="Afternoon">
-              <span>Afternoon</span>
-            </label>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2"><%= t('appt.preferredTime') %></label>
+            <div class="flex gap-4">
+              <label class="appointment-toggle relative cursor-pointer">
+                <input type="radio" name="preferredTime" value="<%= t('appt.morning') %>" required>
+                <span><%= t('appt.morning') %></span>
+              </label>
+
+              <label class="appointment-toggle relative cursor-pointer">
+                <input type="radio" name="preferredTime" value="<%= t('appt.afternoon') %>">
+                <span><%= t('appt.afternoon') %></span>
+              </label>
+            </div>
           </div>
         </div>
 
         <div>
-          <label class="block text-sm font-medium">Notes</label>
+          <label class="block text-sm font-medium"><%= t('appt.notes') %></label>
           <textarea name="message" rows="4" class="mt-1 w-full border rounded-xl px-3 py-2"></textarea>
         </div>
 
         <button class="mt-2 px-5 py-3 bg-green-800 text-white rounded-xl hover:bg-green-700">
-          Send Request
+          <%= t('appt.submit') %>
         </button>
       </form>
     </div>

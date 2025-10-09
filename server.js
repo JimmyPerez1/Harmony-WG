@@ -12,6 +12,8 @@ const methodOverride = require("method-override");
 const morgan = require("morgan");
 const cookieParser = require('cookie-parser');
 const port = process.env.PORT || 3000;
+const strings = require('./i18n');
+
 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on("connected", () => {
@@ -32,9 +34,20 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  res.locals.lang = req.cookies.lang === 'es' ? 'es' : 'en';
+  const lang = req.cookies.lang === 'es' ? 'es' : 'en';
+  res.locals.lang = lang;
+
+  res.locals.t = (path) => {
+    try {
+      return path.split('.').reduce((o, k) => (o || {})[k], strings[lang]) || path;
+    } catch {
+      return path;
+    }
+  };
+
   next();
 });
+
 
 app.get("/.well-known/appspecific/com.chrome.devtools.json", (req, res) => {
   res.status(204).end();

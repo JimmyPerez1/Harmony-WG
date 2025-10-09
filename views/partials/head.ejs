@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= (typeof lang !== 'undefined' && lang==='es') ? 'es' : 'en' %>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <!-- Title & Meta -->
-  <title>Harmony Wellness Group | Rehabilitation & Wellness Clinic in Tampa, FL</title>
-  <meta name="description" content="Harmony Wellness Group is a Tampa-based rehabilitation and wellness clinic helping patients move, heal, and feel their best. Book your appointment today!">
+  <title><%= (typeof pageTitle !== 'undefined' && pageTitle) ? pageTitle : t('meta.default.title') %></title>
+  <meta name="description" content="<%= (typeof pageDescription !== 'undefined' && pageDescription) ? pageDescription : t('meta.default.description') %>">
   <meta name="keywords" content="Tampa clinic, rehabilitation Tampa, physical therapy Tampa, wellness center Tampa, Harmony Wellness Group">
   <meta name="author" content="Harmony Wellness Group">
-  <link rel="canonical" href="https://your-domain.com/">
+  <link rel="canonical" href="https://harmonywellnessgroup.co/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Harmony Wellness Group | Rehabilitation & Wellness Clinic in Tampa, FL">
