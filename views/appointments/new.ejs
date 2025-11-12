@@ -77,9 +77,11 @@
           <textarea name="message" rows="4" class="mt-1 w-full border rounded-xl px-3 py-2"></textarea>
         </div>
 
-        <button class="mt-2 px-5 py-3 bg-green-800 text-white rounded-xl hover:bg-green-700">
-          <%= t('appt.submit') %>
-        </button>
+        <input
+          type="submit"
+          value="<%= t('appt.submit') %>"
+          style="background:#065f46;color:#fff;padding:12px 20px;border-radius:12px;display:inline-block"
+        />
       </form>
     </div>
   </main>
